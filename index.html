@@ -3,41 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ko Pyae Game Shop Menu</title>
+    <title>Ko Pyae Game Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>🎮 Ko Pyae Game Shop</h1>
-        <p>Scan • Choose • Play</p>
-    </header>
+<header>
+    <h1>ThreeMouse Playstation Centre</h1>
+    <p>Select your game and enjoy</p>
+</header>
+<section class="rates card">
+    <h2>⏱ Time Rates</h2>
+    <p>30 Minutes — 30 B</p>
+    <p>1 Hour — 60 B</p>
+</section>
 
-    <section class="card">
-        <h2>⏱ Time Rates</h2>
-        <p>30 Minutes — 30 B</p>
-        <p>1 Hour - 60 B</p>
+<main class="container">
+
+    <section class="shop-header">
+        <h2 class="title">🔥 Popular Games</h2>
+        <p class="subtitle">Browse by category or play type — tap a button to filter.</p>
     </section>
 
-    <section class="card">
-        <h2>🔥 Popular Games</h2>
-        <ul>
-            <li>FIFA 26</li>
-            <li>GTA V</li>
-            <li>mortal kombat</li>
-            <li>God Of War</li>
-        </ul>
+    <section class="controls">
+        <div class="control-group">
+            <strong>Play Type</strong>
+            <div class="tags" id="playTags">
+                <button class="tag active" data-play="all">All</button>
+                <button class="tag" data-play="single">Single Player</button>
+                <button class="tag" data-play="multi">Multiplayer</button>
+                <button class="tag" data-play="co-op">Co-op</button>
+            </div>
+        </div>
     </section>
 
-    <section class="card">
-        <h2>🥤 Drinks</h2>
-        <p>Coke — 20 B</p>
-        <p>coconut drink — 15 B</p>
+    <section class="game-grid" id="gameGrid">
+
+        <div class="game-card" data-category="sports" data-play="multi">
+            <img src="images/fc.jpg" alt="FIFA 26">
+            <div class="card-body">
+                <h3>FIFA 26</h3>
+                <p class="meta">Sports · Multiplayer</p>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="action" data-play="single">
+            <img src="images/gta.jpeg" alt="GTA V">
+            <div class="card-body">
+                <h3>GTA V</h3>
+                <p class="meta">Action · Single Player</p>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="fighting" data-play="multi">
+            <img src="images/mkq.jpg" alt="Mortal Kombat 1">
+            <div class="card-body">
+                <h3>Mortal Kombat 1</h3>
+                <p class="meta">Fighting · Multiplayer</p>
+            </div>
+        </div>
+
+        <div class="game-card" data-category="adventure" data-play="co-op">
+            <img src="images/yt.jpeg" alt="Yotei">
+            <div class="card-body">
+                <h3>Yotei</h3>
+                <p class="meta">Adventure · Co-op</p>
+            </div>
+        </div>
+
     </section>
 
-    <footer>
-        <p>Welcome to the best gaming experience 🎉</p>
-    </footer>
+</main>
+
+    <div class="more-btn">
+        <a class="btn" href="games.html">See More Games →</a>
+    </div>
+
+<footer>
+    <p>Welcome Gamers 🎉</p>
+</footer>
+
+<script>
+// Simple filtering for play-type tags only
+(() => {
+    const playTags = document.querySelectorAll('#playTags .tag');
+    const gameCards = document.querySelectorAll('#gameGrid .game-card');
+
+    let activePlay = 'all';
+
+    function applyFilters() {
+        gameCards.forEach(card => {
+            const play = card.getAttribute('data-play');
+            const playMatch = activePlay === 'all' || play === activePlay;
+            card.style.display = playMatch ? '' : 'none';
+        });
+    }
+
+    playTags.forEach(t => t.addEventListener('click', function (e) {
+        activePlay = e.currentTarget.dataset.play;
+        playTags.forEach(p => p.classList.toggle('active', p.dataset.play === activePlay));
+        applyFilters();
+    }));
+
+    // initial filter
+    applyFilters();
+})();
+</script>
 
 </body>
 </html>

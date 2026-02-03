@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Games — ThreeMouse Playstation Centre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner container">
+        <div class="brand">
+            <div class="logo-mark">🎮</div>
+            <div>
+                <h1 class="brand-title">ThreeMouse</h1>
+                <p class="tagline">Playstation Centre • All Games</p>
+            </div>
+        </div>
+        <nav class="top-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="#games">Browse</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="shop-header">
+        <h2 class="title">All Games</h2>
+        <p class="subtitle">Full list — use filters to narrow results or return to the homepage.</p>
+    </section>
+
+    <p style="text-align:center;margin-top:6px;"><a class="btn" href="index.html">← Back to Home</a></p>
+
+    <section class="controls">
+        <div class="control-group">
+            <strong>Play Type</strong>
+            <div class="tags" id="playTags">
+                <button class="tag active" data-play="all">All</button>
+                <button class="tag" data-play="single">Single Player</button>
+                <button class="tag" data-play="multi">Multiplayer</button>
+                <button class="tag" data-play="co-op">Co-op</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="games" class="game-grid">
+        <!-- Popular four (same as home) -->
+        <div class="game-card" data-category="sports" data-play="multi">
+            <img src="images/fc.jpg" alt="FIFA 26">
+            <div class="card-body"><h3>FIFA 26</h3><p class="meta">Sports · Multiplayer</p></div>
+        </div>
+        <div class="game-card" data-category="action" data-play="single">
+            <img src="images/gta.jpeg" alt="GTA V">
+            <div class="card-body"><h3>GTA V</h3><p class="meta">Action · Single Player</p></div>
+        </div>
+        <div class="game-card" data-category="fighting" data-play="multi">
+            <img src="images/mkq.jpg" alt="Mortal Kombat 1">
+            <div class="card-body"><h3>Mortal Kombat 1</h3><p class="meta">Fighting · Multiplayer</p></div>
+        </div>
+        <div class="game-card" data-category="adventure" data-play="co-op">
+            <img src="images/yt.jpeg" alt="Yotei">
+            <div class="card-body"><h3>Yotei</h3><p class="meta">Adventure · Co-op</p></div>
+        </div>
+
+        <!-- Additional games -->
+        <div class="game-card" data-category="action" data-play="multi">
+            <img src="images/assault.jpg" alt="Assault Horizon">
+            <div class="card-body"><h3>Assault Horizon</h3><p class="meta">Action · Multiplayer</p></div>
+        </div>
+        <div class="game-card" data-category="adventure" data-play="single">
+            <img src="images/zelda.jpg" alt="Lost Island">
+            <div class="card-body"><h3>Lost Island</h3><p class="meta">Adventure · Single Player</p></div>
+        </div>
+        <div class="game-card" data-category="racing" data-play="multi">
+            <img src="images/rcar.jpg" alt="Speedster X">
+            <div class="card-body"><h3>Speedster X</h3><p class="meta">Racing · Multiplayer</p></div>
+        </div>
+        <div class="game-card" data-category="rpg" data-play="single">
+            <img src="images/epic.jpg" alt="Epic Quest">
+            <div class="card-body"><h3>Epic Quest</h3><p class="meta">RPG · Single Player</p></div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>ThreeMouse Playstation Centre</p>
+</footer>
+
+</body>
+</html>
+
+<script>
+// Play-type filtering on games page
+(function () {
+    const playTags = document.querySelectorAll('#playTags .tag');
+    const gameCards = document.querySelectorAll('.game-grid .game-card');
+    let activePlay = 'all';
+
+    function applyFilters() {
+        gameCards.forEach(card => {
+            const play = card.getAttribute('data-play');
+            const match = activePlay === 'all' || play === activePlay;
+            card.style.display = match ? '' : 'none';
+        });
+    }
+
+    playTags.forEach(t => t.addEventListener('click', function (e) {
+        activePlay = e.currentTarget.dataset.play;
+        playTags.forEach(p => p.classList.toggle('active', p.dataset.play === activePlay));
+        applyFilters();
+    }));
+
+    applyFilters();
+})();
+</script>
+
+
