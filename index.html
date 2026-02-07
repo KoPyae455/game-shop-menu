@@ -14,8 +14,21 @@
 </header>
 <section class="rates card">
     <h2>⏱ Time Rates</h2>
-    <p>30 Minutes — 30 B</p>
-    <p>1 Hour — 60 B</p>
+    <div class="rates-grid">
+        <div class="rate-item">
+            <h3>PlayStation 4</h3>
+            <p class="price">1 Hour — 60 B</p>
+            <p class="desc">Standard PS4 station with DualShock controller.</p>
+            <div class="platform-badge">PS4</div>
+        </div>
+
+        <div class="rate-item">
+            <h3>PlayStation 5</h3>
+            <p class="price">1 Hour — 80 B</p>
+            <p class="desc">Next‑gen PS5 with DualSense and 4K support.</p>
+            <div class="platform-badge ps5">PS5</div>
+        </div>
+    </div>
 </section>
 
 <main class="container">
@@ -25,22 +38,12 @@
         <p class="subtitle">Browse by category or play type — tap a button to filter.</p>
     </section>
 
-    <section class="controls">
-        <div class="control-group">
-            <strong>Play Type</strong>
-            <div class="tags" id="playTags">
-                <button class="tag active" data-play="all">All</button>
-                <button class="tag" data-play="single">Single Player</button>
-                <button class="tag" data-play="multi">Multiplayer</button>
-                <button class="tag" data-play="co-op">Co-op</button>
-            </div>
-        </div>
-    </section>
+    <!-- Play type controls removed on home page per request -->
 
     <section class="game-grid" id="gameGrid">
 
         <div class="game-card" data-category="sports" data-play="multi">
-            <img src="images/fc.jpg" alt="FIFA 26">
+            <img src="images/fc26.jpg" alt="FIFA 26">
             <div class="card-body">
                 <h3>FIFA 26</h3>
                 <p class="meta">Sports · Multiplayer</p>
@@ -48,7 +51,7 @@
         </div>
 
         <div class="game-card" data-category="action" data-play="single">
-            <img src="images/gta.jpeg" alt="GTA V">
+            <img src="images/gtav.jpg" alt="GTA V">
             <div class="card-body">
                 <h3>GTA V</h3>
                 <p class="meta">Action · Single Player</p>
@@ -56,7 +59,7 @@
         </div>
 
         <div class="game-card" data-category="fighting" data-play="multi">
-            <img src="images/mkq.jpg" alt="Mortal Kombat 1">
+            <img src="images/mk1.jpg" alt="Mortal Kombat 1">
             <div class="card-body">
                 <h3>Mortal Kombat 1</h3>
                 <p class="meta">Fighting · Multiplayer</p>
@@ -64,7 +67,7 @@
         </div>
 
         <div class="game-card" data-category="adventure" data-play="co-op">
-            <img src="images/yt.jpeg" alt="Yotei">
+            <img src="images/yotei.jpg" alt="Yotei">
             <div class="card-body">
                 <h3>Yotei</h3>
                 <p class="meta">Adventure · Co-op</p>
@@ -80,35 +83,21 @@
     </div>
 
 <footer>
-    <p>Welcome Gamers 🎉</p>
+    <div class="footer-inner container">
+        <p> Fb Pages လေးကိုလည်း follow လုပ်ခဲ့ပေးပါဦးဗျ။ ကြွရောက်လာကြသော gamer အပေါင်းသူတော်ကောင်းတို့ ပျော်ရွှင်ချမ်းမြေ့ကြပါစေ။
+🎉</p>
+        <div class="social-links">
+            <!-- Replace href with your Facebook page URL -->
+            <a class="social-link" href="https://www.facebook.com/share/1BQQpRULpQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" title="Visit our Facebook page">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.657-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.588l-.467 3.622h-3.121V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
 </footer>
 
-<script>
-// Simple filtering for play-type tags only
-(() => {
-    const playTags = document.querySelectorAll('#playTags .tag');
-    const gameCards = document.querySelectorAll('#gameGrid .game-card');
-
-    let activePlay = 'all';
-
-    function applyFilters() {
-        gameCards.forEach(card => {
-            const play = card.getAttribute('data-play');
-            const playMatch = activePlay === 'all' || play === activePlay;
-            card.style.display = playMatch ? '' : 'none';
-        });
-    }
-
-    playTags.forEach(t => t.addEventListener('click', function (e) {
-        activePlay = e.currentTarget.dataset.play;
-        playTags.forEach(p => p.classList.toggle('active', p.dataset.play === activePlay));
-        applyFilters();
-    }));
-
-    // initial filter
-    applyFilters();
-})();
-</script>
+<!-- No filtering on home page (play type removed) -->
 
 </body>
 </html>

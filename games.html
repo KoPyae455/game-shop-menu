@@ -14,7 +14,7 @@
             <div class="logo-mark">🎮</div>
             <div>
                 <h1 class="brand-title">ThreeMouse</h1>
-                <p class="tagline">Playstation Centre • All Games</p>
+                <p class="tagline">Playstation Centre •</p>
             </div>
         </div>
         <nav class="top-nav">
@@ -34,7 +34,7 @@
 
     <section class="controls">
         <div class="control-group">
-            <strong>Play Type</strong>
+            <strong>Type</strong>
             <div class="tags" id="playTags">
                 <button class="tag active" data-play="all">All</button>
                 <button class="tag" data-play="single">Single Player</button>
@@ -42,45 +42,131 @@
                 <button class="tag" data-play="co-op">Co-op</button>
             </div>
         </div>
+
+        <div class="control-group">
+            <strong>Category</strong>
+            <div class="tags" id="catTags">
+                <button class="tag active" data-cat="all">All</button>
+                <button class="tag" data-cat="action">Action</button>
+                <button class="tag" data-cat="adventure">Adventure</button>
+                <button class="tag" data-cat="rpg">RPG</button>
+                <button class="tag" data-cat="sports">Sports</button>
+                <button class="tag" data-cat="fighting">Fighting</button>
+                <button class="tag" data-cat="racing">Racing</button>
+                <button class="tag" data-cat="western">Western</button>
+                <button class="tag" data-cat="horror">Horror</button>
+                <button class="tag" data-cat="shooter">Shooter</button>
+                <button class="tag" data-cat="stealth">Stealth</button>
+                <button class="tag" data-cat="platform">Platform</button>
+                <button class="tag" data-cat="co-op">Co-op</button>
+            </div>
+        </div>
     </section>
 
     <section id="games" class="game-grid">
-        <!-- Popular four (same as home) -->
-        <div class="game-card" data-category="sports" data-play="multi">
-            <img src="images/fc.jpg" alt="FIFA 26">
+        <!-- All games (generated from images/) -->
+        <div class="game-card" data-category="platform" data-play="single" data-intro="ချစ်စရာကောင်းတဲ့ Astro လေးနဲ့အတူ PlayStation ရဲ့ သမိုင်းတစ်လျှောက်က နာမည်ကြီး ဇာတ်ကောင်တွေကိုပါ တွေ့မြင်ရမှာ ဖြစ်ပါတယ်။ မိသားစုနဲ့အတူ ဆော့လို့လည်းကောင်းသလို၊ Graphic ကလည်း အရမ်းကို တောက်ပပြီး မျက်စိပသာဒ ဖြစ်စေပါတယ်။">
+            <img src="images/astro.jpg" alt="Astro's Playroom">
+            <div class="card-body"><h3>Astro's Playroom</h3><p class="meta">Platform · Single Player</p></div>
+        </div>
+
+        <div class="game-card" data-category="co-op" data-play="co-op" data-intro="ေထာင်ထဲက အပြန်အလှန်ပေါင်းသင်းဆက်ဆံမှုတွေကို အခြေခံပြီး ရိုက်ကူးထားတဲ့ ဂိမ်းတစ်ခုပါ။ နှစ်ယောက်အတူတူ ပေါင်းသင်းပြီး စွန့်စားခန်းတွေကို ဖြတ်သန်းရမှာ ဖြစ်ပါတယ်။">
+            <img src="images/awayout.jpg" alt="A Way Out">
+            <div class="card-body"><h3>A Way Out</h3><p class="meta">Action · Co-op</p></div>
+        </div>
+
+        <div class="game-card" data-category="rpg" data-play="single" data-intro="ဒဏ္ဍာရီလာ မျောက်မင်း (Sun Wukong) ရဲ့ အကြောင်းကို အခြေခံပြီး ရိုက်ကူးထားတဲ့ Action RPG ဂိမ်းတစ်ခုပါ။ ဒီဂိမ်းက ၂၀၂၄ ရဲ့ အကောင်းဆုံးဂိမ်းစာရင်းထဲမှာ ပါဝင်ခဲ့ပြီး Unreal Engine 5 ရဲ့ အမိုက်စား Graphic တွေ၊ ခက်ခဲတဲ့ Boss Fight တွေနဲ့အတူ တရုတ်ဒဏ္ဍာရီထဲကို စီးမျောသွားစေမှာပါ။ စိန်ခေါ်မှုတွေကို ကြိုက်နှစ်သက်တဲ့ သူတွေအတွက် အထူးသင့်တော်ပါတယ်။">
+            <img src="images/black_myth.jpg" alt="Black Myth">
+            <div class="card-body"><h3>Black Myth</h3><p class="meta">RPG · Single Player</p></div>
+        </div>
+
+        <div class="game-card" data-category="action" data-play="single" data-intro="အနာဂတ်မြို့ကြီးထဲက နည်းပညာနဲ့ လူသားတွေအကြောင်းကို အမိုက်စား Graphic တွေနဲ့ တွေ့မြင်ရမှာပါ။">
+            <img src="images/cyber.jpg" alt="Cyberpunk-ish">
+            <div class="card-body"><h3>Cyber</h3><p class="meta">Action · Single Player</p></div>
+        </div>
+
+        <div class="game-card" data-category="sports" data-play="multi" data-intro="ေဘာလုံးဝါသနာအိုးေလးတို့အတွက် FIFA 26 က အကောင်းဆုံးရွေးချယ်မှုပါ။ Realistic gameplay နဲ့ အသင်းအဖွဲ့တွေ၊ လုပ်ဆောင်ချက်တွေ အများကြီးပါဝင်ပါတယ်။">
+            <img src="images/fc26.jpg" alt="FIFA 26">
             <div class="card-body"><h3>FIFA 26</h3><p class="meta">Sports · Multiplayer</p></div>
         </div>
-        <div class="game-card" data-category="action" data-play="single">
-            <img src="images/gta.jpeg" alt="GTA V">
-            <div class="card-body"><h3>GTA V</h3><p class="meta">Action · Single Player</p></div>
+
+        <div class="game-card" data-category="action" data-play="single" data-intro="Kratos နဲ့ Atreus တို့ရဲ့ နော့စ်ဒဏ္ဍာရီထဲက ခရီးစဉ်ကို အကောင်းဆုံး Graphic တွေနဲ့ ဆော့ရမှာပါ။">
+            <img src="images/gow.jpg" alt="God of War">
+            <div class="card-body"><h3>God of War</h3><p class="meta">Action · Single Player</p></div>
         </div>
-        <div class="game-card" data-category="fighting" data-play="multi">
-            <img src="images/mkq.jpg" alt="Mortal Kombat 1">
-            <div class="card-body"><h3>Mortal Kombat 1</h3><p class="meta">Fighting · Multiplayer</p></div>
+
+        <div class="game-card" data-category="stealth" data-play="single" data-intro="ကမ္ဘာကျော် လူသတ်သမား Agent 47 အဖြစ်နဲ့ ပစ်မှတ်တွေကို သိသိသာသာရော၊ မသိမသာရော နည်းမျိုးစုံသုံးပြီး ရှင်းလင်းရမှာပါ။ ဉာဏ်သုံးရတာ ကြိုက်သူတွေအတွက်ပါ။">
+            <img src="images/hitman.jpg" alt="Hitman">
+            <div class="card-body"><h3>Hitman</h3><p class="meta">Stealth · Single Player</p></div>
         </div>
-        <div class="game-card" data-category="adventure" data-play="co-op">
-            <img src="images/yt.jpeg" alt="Yotei">
+
+        <div class="game-card" data-category="co-op" data-play="co-op" data-intro="နှစ်ယောက်အတူတူ တိုင်ပင်ပြီး ဆော့ရတာဖြစ်လို့">
+            <img src="images/ittakestwo.jpg" alt="It Takes Two">
+            <div class="card-body"><h3>It Takes Two</h3><p class="meta">Adventure · Co-op</p></div>
+        </div>
+
+        <div class="game-card" data-category="fighting" data-play="multi" data-intro="Anime ချစ်သူတွေအတွက် နာမည်ကြီး Anime ဇာတ်ကောင်တွေနဲ့ တိုက်ခိုက်ရမယ့် ဂိမ်းတွေပါ။">
+            <img src="images/jojo.jpg" alt="JoJo">
+            <div class="card-body"><h3>JoJo</h3><p class="meta">Fighting · Multiplayer</p></div>
+        </div>
+
+        <div class="game-card" data-category="fighting" data-play="multi" data-intro="ပြင်းထန်တဲ့ တိုက်ခိုက်မှုတွေနဲ့ သွေးထွက်သံယို မြင်ကွင်းတွေပါတဲ့ နာမည်ကျော် တိုက်ခိုက်ရေးဂိမ်းတွေပါ။">
+            <img src="images/mk11.jpg" alt="Mortal Kombat 11">
+            <div class="card-body"><h3>Mortal Kombat 11</h3><p class="meta">Fighting · Multiplayer</p></div>
+        </div>
+
+        <div class="game-card" data-category="action" data-play="single" data-intro="Anime ချစ်သူတွေအတွက် နာမည်ကြီး Anime ဇာတ်ကောင်တွေနဲ့ တိုက်ခိုက်ရမယ့် ဂိမ်းတွေပါ။">
+            <img src="images/naruto.jpg" alt="Naruto">
+            <div class="card-body"><h3>Naruto</h3><p class="meta">Action · Single Player</p></div>
+        </div>
+
+        <div class="game-card" data-category="racing" data-play="multi" data-intro="လမ်းပေါ်မှာ ကားအမိုက်စားတွေနဲ့ ပြိုင်ရတာ ကြိုက်သူတွေအတွက်ပါ။">
+            <img src="images/nfs.jpg" alt="Need for Speed">
+            <div class="card-body"><h3>Need for Speed</h3><p class="meta">Racing · Multiplayer</p></div>
+        </div>
+
+        <div class="game-card" data-category="western" data-play="single" data-intro="Cowboy တစ်ယောက်ရဲ့ ဘဝကို အသေးစိတ်ကျကျ ခံစားရမယ့် Open World ကမ္ဘာကျော်ဂိမ်းဖြစ်ပါတယ်။">
+            <img src="images/rdr2.jpg" alt="Red Dead Redemption 2">
+            <div class="card-body"><h3>Red Dead Redemption 2</h3><p class="meta">Action · Single Player</p></div>
+        </div>
+
+        <div class="game-card" data-category="horror" data-play="single" data-intro="အေးဂျင့် Leon S. Kennedy က သမ္မတရဲ့သမီးကို ကယ်တင်ဖို့ စပိန်က ရွာငယ်လေးတစ်ခုကို သွားရောက်ရင်း ထူးဆန်းတဲ့ ကပ်ရောဂါဆိုးတွေ၊ ဘီလူးတွေနဲ့ ရင်ဆိုင်ရတာကို ရင်တထိတ်ထိတ်နဲ့ ဆော့ရမှာပါ။ Horror နဲ့ Action ကို မျှမျှတတ ခံစားချင်သူတွေအတွက် အကောင်းဆုံးဂိမ်းပဲဖြစ်ပါတယ်။">
+            <img src="images/re4.jpg" alt="Resident Evil 4">
+            <div class="card-body"><h3>Resident Evil 4</h3><p class="meta">Horror · Single Player</p></div>
+        </div>
+
+        <div class="game-card" data-category="fighting" data-play="multi" data-intro="ရောင်စုံ တိုက်ခိုက်မှုတွေ၊ နာမည်ကြီး ဇာတ်ကောင်တွေနဲ့ ပြည့်နှက်ထားတဲ့ Fighting ဂိမ်းတစ်ခုပါ။">
+            <img src="images/sf6.jpg" alt="Street Fighter 6">
+            <div class="card-body"><h3>Street Fighter 6</h3><p class="meta">Fighting · Multiplayer</p></div>
+        </div>
+
+        <div class="game-card" data-category="shooter" data-play="single" data-intro="နှစ်ယောက်အတူတူဆော့ချင်သူတွေအတွက် လက်မလွှတ်သင့်တဲ့ ဂိမ်းကောင်းလေးတစ်ခုပါ။/div>
+        </div>
+
+        <div class="game-card" data-category="adventure" data-play="single" data-intro="နာမည်ကျော် Lara Croft နဲ့အတူ ရှေးဟောင်းပစ္စည်းတွေကို ရှာဖွေရင်း၊ နယ်မြေအသစ်တွေကို စွန့်စားသွားလာရမယ့် ဂိမ်းဖြစ်ပါတယ်။">
+            <img src="images/tomb.jpg" alt="Tomb Raider">
+            <div class="card-body"><h3>Tomb Raider</h3><p class="meta">Adventure · Single Player</p></div>
+        </div>
+
+        <div class="game-card" data-category="sports" data-play="multi" data-intro="ဂျပန်ဆာမူရိုင်းဇာတ်လမ်းတွေကို နှစ်သက်ရင် ဒါက အကောင်းဆုံးရွေးချယ်မှုပါ။">
+            <img src="images/tsu.jpg" alt="TSU">
+            <div class="card-body"><h3>TSU</h3><p class="meta">Sports · Multiplayer</p></div>
+        </div>
+
+        <div class="game-card" data-category="sports" data-play="multi" data-intro="ထိုးမယ်ကြိတ်မယ်ဆိုတဲ့ ညီကိုတို့အတွက် အကောင်းဆုံး ရွေးချယ်မှုပါ။">
+            <img src="images/ufc.jpg" alt="UFC">
+            <div class="card-body"><h3>UFC</h3><p class="meta">Fighting · Multiplayer</p></div>
+        </div>
+
+        <div class="game-card" data-category="rpg" data-play="single" data-intro="ဘီလူးသတ်သမား Geralt အဖြစ်နဲ့ မှော်ဆန်တဲ့ ကမ္ဘာကြီးထဲမှာ စွန့်စားခန်းဖွင့်ရမှာဖြစ်ပါတယ်။">
+            <img src="images/witcher3.jpg" alt="The Witcher 3">
+            <div class="card-body"><h3>The Witcher 3</h3><p class="meta">RPG · Single Player</p></div>
+        </div>
+
+        <div class="game-card" data-category="adventure" data-play="co-op" data-intro="ဂျပန်ဆာမူရိုင်းဇာတ်လမ်းတွေကို နှစ်သက်ရင် ဒါက အကောင်းဆုံးရွေးချယ်မှုပါ။">
+            <img src="images/yotei.jpg" alt="Yotei">
             <div class="card-body"><h3>Yotei</h3><p class="meta">Adventure · Co-op</p></div>
         </div>
-
-        <!-- Additional games -->
-        <div class="game-card" data-category="action" data-play="multi">
-            <img src="images/assault.jpg" alt="Assault Horizon">
-            <div class="card-body"><h3>Assault Horizon</h3><p class="meta">Action · Multiplayer</p></div>
-        </div>
-        <div class="game-card" data-category="adventure" data-play="single">
-            <img src="images/zelda.jpg" alt="Lost Island">
-            <div class="card-body"><h3>Lost Island</h3><p class="meta">Adventure · Single Player</p></div>
-        </div>
-        <div class="game-card" data-category="racing" data-play="multi">
-            <img src="images/rcar.jpg" alt="Speedster X">
-            <div class="card-body"><h3>Speedster X</h3><p class="meta">Racing · Multiplayer</p></div>
-        </div>
-        <div class="game-card" data-category="rpg" data-play="single">
-            <img src="images/epic.jpg" alt="Epic Quest">
-            <div class="card-body"><h3>Epic Quest</h3><p class="meta">RPG · Single Player</p></div>
-        </div>
-
     </section>
 
 </main>
@@ -93,17 +179,22 @@
 </html>
 
 <script>
-// Play-type filtering on games page
+// Combined Play Type + Category filtering on games page
 (function () {
     const playTags = document.querySelectorAll('#playTags .tag');
+    const catTags = document.querySelectorAll('#catTags .tag');
     const gameCards = document.querySelectorAll('.game-grid .game-card');
+
     let activePlay = 'all';
+    let activeCat = 'all';
 
     function applyFilters() {
         gameCards.forEach(card => {
-            const play = card.getAttribute('data-play');
-            const match = activePlay === 'all' || play === activePlay;
-            card.style.display = match ? '' : 'none';
+            const play = card.getAttribute('data-play') || '';
+            const cat = card.getAttribute('data-category') || '';
+            const playMatch = activePlay === 'all' || play === activePlay;
+            const catMatch = activeCat === 'all' || cat === activeCat;
+            card.style.display = (playMatch && catMatch) ? '' : 'none';
         });
     }
 
@@ -113,8 +204,78 @@
         applyFilters();
     }));
 
+    catTags.forEach(t => t.addEventListener('click', function (e) {
+        activeCat = e.currentTarget.dataset.cat;
+        catTags.forEach(c => c.classList.toggle('active', c.dataset.cat === activeCat));
+        applyFilters();
+    }));
+
+    // initial filter
     applyFilters();
 })();
+</script>
+
+<!-- Modal for game details (populated from each card's data-intro attribute) -->
+<div id="gameModal" class="game-modal" style="display:none;" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true">
+        <div class="modal-body">
+            <img id="modalImg" src="" alt="">
+            <div class="modal-content">
+                <h3 id="modalTitle"></h3>
+                <p id="modalIntro">No introduction provided. Add a <code>data-intro</code> attribute to the game's <code>div.game-card</code> to show text here.</p>
+            </div>
+        </div>
+        <div class="modal-actions">
+            <button id="modalClose" class="btn-ghost">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Game details modal: opens when clicking a .game-card and reads `data-intro`
+    (function () {
+        const modal = document.getElementById('gameModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalIntro = document.getElementById('modalIntro');
+        const modalClose = document.getElementById('modalClose');
+
+        function openModal(card){
+            const imgEl = card.querySelector('img');
+            const titleEl = card.querySelector('.card-body h3');
+            const intro = card.getAttribute('data-intro') || '';
+
+            modalImg.src = imgEl ? imgEl.src : '';
+            modalImg.alt = imgEl ? imgEl.alt : '';
+            modalTitle.textContent = titleEl ? titleEl.textContent : 'Game';
+            modalIntro.textContent = intro || 'No introduction provided. Edit the card and add a data-intro attribute.';
+
+            modal.style.display = 'flex';
+            modal.setAttribute('aria-hidden','false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(){
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden','true');
+            document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.game-grid .game-card').forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', (e) => {
+                // avoid opening modal when clicking interactive elements inside (if any)
+                if (e.target.closest('a')) return;
+                openModal(card);
+            });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
+
+        // close on ESC
+        document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+    })();
 </script>
 
 
