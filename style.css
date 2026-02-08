@@ -46,7 +46,7 @@ body {
 .rates-grid { display:flex; gap:12px; justify-content:center; padding:18px; margin:18px auto; max-width:900px; }
 .rate-item { background: linear-gradient(180deg,#071428,#0b1b2a); padding:14px 18px; border-radius:12px; min-width:120px; box-shadow: 0 10px 24px rgba(2,8,22,0.6); border:1px solid rgba(255,255,255,0.03); }
 .rate-item h3 { margin:0; color:#9fd3ff; font-size:14px; }
-.price { margin:6px 0 0; font-weight:800; color:#4dd0ff; font-size:18px; }
+.price { margin:6px 0 0; font-weight:800; color:#ff4d4d; font-size:18px; }
 
 /* Rates details */
 .rate-item { position:relative; padding:18px 20px 22px; text-align:center; min-width:200px; }
@@ -98,7 +98,7 @@ body {
     background: #1a1f27;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 0 10px #00ffc3;
+    box-shadow: 0 10px 30px rgba(0,255,195,0.18);
 }
 
 .game-card img {
@@ -113,6 +113,22 @@ body {
 footer {
     margin: 20px;
     opacity: 0.6;
+}
+
+/* Promo ad cards for in-game currency */
+.promo-section { max-width:1100px; margin: 18px auto; padding: 12px 16px; }
+.promo-section h2 { margin: 6px 0 12px; color: #ffd166; }
+.promo-grid { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.promo-card { display:flex; gap:12px; align-items:center; padding:12px; border-radius:12px; background: linear-gradient(180deg,#071428,#0b1b2a); border:1px solid rgba(255,255,255,0.04); box-shadow: 0 12px 28px rgba(0,0,0,0.5); min-width:280px; }
+.promo-card img { width:120px; height:80px; object-fit:cover; border-radius:8px; flex-shrink:0; box-shadow: 0 8px 24px rgba(0,255,195,0.12); }
+.promo-price { font-weight:800; color:#ffd166; margin:6px 0; font-size:16px; }
+.promo-btn { display:inline-block; margin-top:6px; padding:8px 12px; background: linear-gradient(90deg,#ffd166,#ff9f1c); color:#021028; border-radius:8px; font-weight:700; text-decoration:none; }
+.promo-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255,160,60,0.12); }
+
+@media (max-width:700px) {
+    .promo-grid { flex-direction: column; align-items: center; }
+    .promo-card { width:92%; padding:10px; }
+    .promo-card img { width:100px; height:72px; }
 }
 
 /* Container and header */
